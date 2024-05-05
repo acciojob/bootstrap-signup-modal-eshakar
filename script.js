@@ -1,9 +1,8 @@
 //your JS code here. If required.
-() => {
-  cy.get('button').first().click()
-    .then(() => {
-      cy.get('.modal').should('be.visible');
-      cy.get('.close').click();
-    })
-    .then(() => cy.get('.modal').should('not.be.visible'));
-};
+ document.getElementById('open-modal').addEventListener('click', () => {
+            document.getElementById('modal').classList.remove('hidden');
+        });
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('modal').classList.add('hidden');
+        });
